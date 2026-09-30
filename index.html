@@ -1,0 +1,3479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>Jan ♡ Birthday</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    background:#07030d;
+    color:white;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    touch-action:manipulation;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(185,80,255,.25),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 75%,
+        rgba(255,70,180,.20),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #06030c,
+        #160720,
+        #08030e
+    );
+
+    z-index:-10;
+}
+
+.orb{
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(75px);
+
+    opacity:.35;
+
+    animation:
+    orbMove 12s
+    infinite alternate
+    ease-in-out;
+}
+
+.orb1{
+    width:250px;
+    height:250px;
+
+    background:#a83cff;
+
+    left:-90px;
+    top:10%;
+}
+
+.orb2{
+    width:300px;
+    height:300px;
+
+    background:#ff4cb9;
+
+    right:-120px;
+    bottom:5%;
+
+    animation-delay:2s;
+}
+
+@keyframes orbMove{
+
+    from{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translate(50px,-40px)
+        scale(1.2);
+    }
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+#stars{
+    position:fixed;
+    inset:0;
+
+    z-index:-5;
+
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.5;
+
+    animation:
+    twinkle 2s
+    infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.15;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* =========================
+   SCENES
+========================= */
+
+.scene{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100dvh;
+
+    min-height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+    25px
+    20px
+    100px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    overscroll-behavior:contain;
+
+    scrollbar-width:none;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+    scale(1.08)
+    translateY(20px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease,
+    visibility .8s;
+}
+
+.scene::-webkit-scrollbar{
+    display:none;
+}
+
+.scene.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+    scale(1)
+    translateY(0);
+}
+
+
+.content{
+
+    width:100%;
+
+    max-width:850px;
+
+    text-align:center;
+
+    margin:auto 0;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+    38px
+    25px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.035)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.17);
+
+    backdrop-filter:
+    blur(25px);
+
+    -webkit-backdrop-filter:
+    blur(25px);
+
+    box-shadow:
+
+    0 30px 90px
+    rgba(0,0,0,.45),
+
+    inset 0 1px 0
+    rgba(255,255,255,.15);
+
+    transform-style:preserve-3d;
+
+    animation:
+    glassFloat 5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes glassFloat{
+
+    0%,100%{
+
+        transform:
+        perspective(900px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0);
+    }
+
+    50%{
+
+        transform:
+        perspective(900px)
+        rotateX(1deg)
+        rotateY(-1deg)
+        translateY(-7px);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.label{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#e9b8ff;
+
+    margin-bottom:18px;
+}
+
+h1{
+
+    font-size:
+    clamp(65px,18vw,150px);
+
+    line-height:.85;
+
+    letter-spacing:-5px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #ffd1f1,
+        #c78cff
+    );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    filter:
+    drop-shadow(
+    0 0 25px
+    rgba(255,130,220,.25)
+    );
+}
+
+h2{
+
+    font-size:
+    clamp(36px,9vw,80px);
+
+    line-height:1;
+
+    margin:
+    12px 0 25px;
+}
+
+.text{
+
+    max-width:680px;
+
+    margin:auto;
+
+    font-size:
+    clamp(15px,4.4vw,20px);
+
+    line-height:1.85;
+
+    color:#eee1f2;
+}
+
+.pink{
+    color:#ff9ddd;
+}
+
+.gold{
+    color:#ffd58a;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:55px;
+
+    padding:
+    15px
+    30px;
+
+    margin-top:30px;
+
+    border-radius:100px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.22);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.05)
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    backdrop-filter:
+    blur(15px);
+
+    -webkit-backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.3);
+
+    transition:
+    transform .2s,
+    background .2s;
+}
+
+.btn:active{
+    transform:scale(.92);
+}
+
+.btn:hover{
+    background:
+    rgba(255,255,255,.16);
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:8px;
+
+    margin:
+    28px auto 0;
+
+    max-width:560px;
+}
+
+.time{
+
+    padding:
+    16px 5px;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.10);
+
+    box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.08);
+}
+
+.time strong{
+
+    display:block;
+
+    font-size:
+    clamp(23px,7vw,40px);
+
+    line-height:1;
+}
+
+.time span{
+
+    display:block;
+
+    margin-top:7px;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    color:#cdbbd3;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+.hiddenMessage{
+
+    display:none;
+
+    margin-top:28px;
+
+    animation:
+    reveal .8s ease;
+}
+
+@keyframes reveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* =========================
+   FINAL GLOW
+========================= */
+
+.finalGlow{
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,70,200,.16);
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+    animation:
+    finalPulse 3s
+    infinite alternate;
+}
+
+@keyframes finalPulse{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:.4;
+    }
+
+    to{
+
+        transform:scale(1.3);
+
+        opacity:.8;
+    }
+}
+
+
+/* =========================
+   PROGRESS DOTS
+========================= */
+
+.progress{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:16px;
+
+    transform:
+    translateX(-50%);
+
+    display:flex;
+
+    gap:6px;
+
+    z-index:100;
+}
+
+.dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    transition:.3s;
+}
+
+.dot.active{
+
+    width:25px;
+
+    background:#ff9ddd;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.float{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    animation:
+    floatUp 4s
+    linear forwards;
+}
+
+@keyframes floatUp{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translateY(0)
+        scale(.7)
+        rotate(0);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translateY(-105vh)
+        scale(1.4)
+        rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .scene{
+
+        padding:
+        70px
+        17px
+        110px;
+
+        align-items:flex-start;
+    }
+
+    .glass{
+
+        padding:
+        30px
+        18px;
+    }
+
+    h1{
+        letter-spacing:-4px;
+    }
+
+    .countdown{
+        gap:6px;
+    }
+
+    .time{
+        padding:
+        13px 3px;
+    }
+
+    .btn{
+
+        width:
+        min(100%,330px);
+    }
+}
+
+
+/* SMALL HEIGHT PHONES */
+
+@media(max-height:650px){
+
+    .glass{
+
+        padding:
+        22px
+        16px;
+    }
+
+    .label{
+        margin-bottom:10px;
+    }
+
+    .countdown{
+        margin-top:16px;
+    }
+
+    .btn{
+        margin-top:20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="background">
+
+    <div class="orb orb1"></div>
+
+    <div class="orb orb2"></div>
+
+</div>
+
+
+<div id="stars"></div>
+
+
+
+<!-- =========================
+     SCENE 1
+========================= -->
+
+<section
+class="scene active"
+id="scene1">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+31 October · Tumhara din
+</div>
+
+
+<h1>Jan</h1>
+
+
+<p class="text">
+
+Kuch din sirf calendar par
+date nahi hote...
+
+<br><br>
+
+Kuch din kisi
+<span class="pink">khaas shakhs</span>
+ke naam hote hain.
+
+<br><br>
+
+Aur 31 October...
+
+<br>
+
+<span class="pink">
+mere liye tumhara din hai. ♡
+</span>
+
+</p>
+
+
+<div class="countdown">
+
+<div class="time">
+<strong id="days">00</strong>
+<span>Days</span>
+</div>
+
+<div class="time">
+<strong id="hours">00</strong>
+<span>Hours</span>
+</div>
+
+<div class="time">
+<strong id="minutes">00</strong>
+<span>Minutes</span>
+</div>
+
+<div class="time">
+<strong id="seconds">00</strong>
+<span>Seconds</span>
+</div>
+
+</div>
+
+
+<button
+class="btn next">
+
+Darwaza kholo ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 2
+========================= -->
+
+<section
+class="scene"
+id="scene2">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+Aaj ka din special hai
+</div>
+
+
+<h2>
+
+Happy Birthday
+
+<span class="pink">♡</span>
+
+</h2>
+
+
+<p class="text">
+
+Jan...
+
+<br><br>
+
+Tum meri zindagi ke un
+khaas logon mein se ho
+jinki presence apne aap mein
+ek khoobsurat feeling hoti hai.
+
+<br><br>
+
+Tumhari smile dekh kar
+mood acha ho jata hai,
+aur tumhari chhoti chhoti
+baatein bhi yaad reh jaati hain.
+
+<br><br>
+
+Main bas ye chahta hoon ke
+tumhari zindagi hamesha
+khushiyon se bhari rahe.
+
+<br><br>
+
+<span class="pink">
+Tum hamesha isi tarah
+muskurati rehna. ♡
+</span>
+
+</p>
+
+
+<button
+class="btn next">
+
+Ek baat aur ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 3
+========================= -->
+
+<section
+class="scene"
+id="scene3">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+Private · Sirf tumhare liye
+</div>
+
+
+<h2>
+Ek chhota sa message...
+</h2>
+
+
+<p class="text">
+
+Jan, ye website sirf ek
+birthday wish nahi hai.
+
+<br><br>
+
+Ismein meri taraf se
+thori si effort,
+thori si creativity,
+aur bohat saari
+<span class="pink">
+achhi wishes
+</span>
+rakhi hain.
+
+<br><br>
+
+Kabhi kabhi feelings ko
+proper words mein kehna
+mushkil hota hai...
+
+<br>
+
+isliye socha ke is baar
+words ke bajaye kuch
+different banaya jaye.
+
+</p>
+
+
+<button
+class="btn"
+id="secretBtn">
+
+Message kholo ♡
+
+</button>
+
+
+<div
+class="hiddenMessage"
+id="secretMessage">
+
+<p class="text">
+
+Tum mere liye bohat
+khaas ho, Jan.
+
+<br><br>
+
+Main dua karta hoon ke
+Allah tumhari har jaiz dua
+qabool kare, tumhein
+hamesha khush rakhe aur
+tumhari zindagi mein
+bohat saari khushiyan laaye.
+
+<br><br>
+
+Tumhari smile hamesha
+aisi hi khoobsurat rahe,
+aur tumhein zindagi mein
+wo sab mile jo tumhare
+dil ke liye behtareen ho.
+
+<br><br>
+
+<span class="pink">
+Happy Birthday, meri Jan ♡
+</span>
+
+</p>
+
+</div>
+
+
+<button
+class="btn next"
+id="continueBtn"
+style="display:none;">
+
+Last surprise ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 4
+========================= -->
+
+<section
+class="scene"
+id="scene4">
+
+<div class="content">
+
+<div class="finalGlow"></div>
+
+
+<div class="glass">
+
+<div class="label">
+31 October · For my Jan
+</div>
+
+
+<h1>Jan</h1>
+
+
+<h2>
+
+Happy Birthday
+
+<span class="pink">♡</span>
+
+</h2>
+
+
+<p class="text">
+
+Aaj ka din tumhare naam.
+
+<br><br>
+
+Allah tumhein hamesha
+khush rakhe,
+tumhari har jaiz dua
+qabool kare aur tumhari
+zindagi ko sukoon,
+khushiyon aur mohabbat
+se bhar de.
+
+<br><br>
+
+Tumhari aankhon mein
+hamesha khushi ho,
+tumhare chehre par
+hamesha smile ho,
+aur tumhari zindagi ka
+har naya saal pehle se
+zyada khoobsurat ho.
+
+<br><br>
+
+<span class="gold">
+
+Happy Birthday, Jan.
+
+</span>
+
+<br>
+
+<span class="pink">
+
+Hamesha khush rehna. ♡
+
+</span>
+
+</p>
+
+
+<button
+class="btn"
+id="celebrate">
+
+Birthday Mode ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRESS -->
+
+<div class="progress">
+
+<div class="dot active"></div>
+
+<div class="dot"></div>
+
+<div class="dot"></div>
+
+<div class="dot"></div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   SCENES
+========================= */
+
+const scenes = [
+
+    document.getElementById("scene1"),
+
+    document.getElementById("scene2"),
+
+    document.getElementById("scene3"),
+
+    document.getElementById("scene4")
+
+];
+
+
+const dots =
+document.querySelectorAll(".dot");
+
+
+let current = 0;
+
+
+function showScene(index){
+
+    if(index < 0){
+        index = 0;
+    }
+
+    if(index >= scenes.length){
+        index = scenes.length - 1;
+    }
+
+
+    scenes[current]
+    .classList
+    .remove("active");
+
+
+    current = index;
+
+
+    scenes[current]
+    .classList
+    .add("active");
+
+
+    dots.forEach(
+        (dot,i)=>{
+
+            dot.classList.toggle(
+                "active",
+                i === current
+            );
+
+        }
+    );
+
+
+
+    if(current === 3){
+
+        createParticles(15);
+
+    }
+
+}
+
+
+
+/* NEXT BUTTONS */
+
+document
+.querySelectorAll(".next")
+.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            showScene(
+                current + 1
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+const secretBtn =
+document.getElementById(
+    "secretBtn"
+);
+
+
+const secretMessage =
+document.getElementById(
+    "secretMessage"
+);
+
+
+const continueBtn =
+document.getElementById(
+    "continueBtn"
+);
+
+
+secretBtn.addEventListener(
+"click",
+()=>{
+
+    secretMessage.style.display =
+    "block";
+
+
+    secretBtn.innerHTML =
+    "Message opened ♡";
+
+
+    createParticles(10);
+
+
+    setTimeout(
+        ()=>{
+
+            continueBtn.style.display =
+            "inline-flex";
+
+        },
+        500
+    );
+
+});
+
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+function updateCountdown(){
+
+    const now =
+    new Date();
+
+
+    let year =
+    now.getFullYear();
+
+
+    let target =
+    new Date(
+        year,
+        9,
+        31,
+        0,
+        0,
+        0
+    );
+
+
+    if(now > target){
+
+        target =
+        new Date(
+            year + 1,
+            9,
+            31,
+            0,
+            0,
+            0
+        );
+
+    }
+
+
+    const difference =
+    target - now;
+
+
+    if(difference <= 0){
+
+        document.getElementById(
+            "days"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "hours"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "minutes"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "seconds"
+        ).innerText = "00";
+
+
+        return;
+
+    }
+
+
+    const days =
+    Math.floor(
+        difference /
+        (1000 * 60 * 60 * 24)
+    );
+
+
+    const hours =
+    Math.floor(
+        (
+            difference /
+            (1000 * 60 * 60)
+        ) % 24
+    );
+
+
+    const minutes =
+    Math.floor(
+        (
+            difference /
+            (1000 * 60)
+        ) % 60
+    );
+
+
+    const seconds =
+    Math.floor(
+        (
+            difference /
+            1000
+        ) % 60
+    );
+
+
+    document.getElementById(
+        "days"
+    ).innerText =
+    String(days)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "hours"
+    ).innerText =
+    String(hours)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "minutes"
+    ).innerText =
+    String(minutes)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "seconds"
+    ).innerText =
+    String(seconds)
+    .padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createParticle(){
+
+    const particle =
+    document.createElement("div");
+
+
+    particle.className =
+    "float";
+
+
+    const symbols = [
+
+        "♡",
+        "♥",
+        "✦",
+        "✧",
+        "⋆"
+
+    ];
+
+
+    particle.innerHTML =
+    symbols[
+        Math.floor(
+            Math.random() *
+            symbols.length
+        )
+    ];
+
+
+    particle.style.left =
+    Math.random() *
+    100 +
+    "vw";
+
+
+    particle.style.fontSize =
+    (
+        12 +
+        Math.random()*20
+    ) +
+    "px";
+
+
+    particle.style.animationDuration =
+    (
+        3 +
+        Math.random()*3
+    ) +
+    "s";
+
+
+    document.body.appendChild(
+        particle
+    );
+
+
+    setTimeout(
+        ()=>{
+
+            particle.remove();
+
+        },
+        6000
+    );
+
+}
+
+
+function createParticles(amount){
+
+    for(
+        let i=0;
+        i<amount;
+        i++
+    ){
+
+        setTimeout(
+            createParticle,
+            i*90
+        );
+
+    }
+
+}
+
+
+
+/* =========================
+   FINAL CELEBRATION
+========================= */
+
+document
+.getElementById("celebrate")
+.addEventListener(
+"click",
+function(){
+
+    createParticles(45);
+
+
+    this.innerHTML =
+    "✨ Happy Birthday Jan ✨";
+
+});
+
+
+
+/* =========================
+   STARS
+========================= */
+
+const stars =
+document.getElementById(
+    "stars"
+);
+
+
+for(
+    let i=0;
+    i<100;
+    i++
+){
+
+    const star =
+    document.createElement(
+        "div"
+    );
+
+
+    star.className =
+    "star";
+
+
+    star.style.left =
+    Math.random()*100 +
+    "%";
+
+
+    star.style.top =
+    Math.random()*100 +
+    "%";
+
+
+    star.style.animationDelay =
+    Math.random()*3 +
+    "s";
+
+
+    stars.appendChild(
+        star
+    );
+
+}
+
+
+
+/* =========================
+   MOBILE SWIPE
+========================= */
+
+let startX = 0;
+
+let startY = 0;
+
+
+document.addEventListener(
+"touchstart",
+function(e){
+
+    startX =
+    e.changedTouches[0]
+    .screenX;
+
+
+    startY =
+    e.changedTouches[0]
+    .screenY;
+
+},
+{passive:true}
+);
+
+
+document.addEventListener(
+"touchend",
+function(e){
+
+    const endX =
+    e.changedTouches[0]
+    .screenX;
+
+
+    const endY =
+    e.changedTouches[0]
+    .screenY;
+
+
+    const diffX =
+    endX - startX;
+
+
+    const diffY =
+    endY - startY;
+
+
+    if(
+
+        Math.abs(diffX) > 70 &&
+
+        Math.abs(diffX) >
+        Math.abs(diffY)
+
+    ){
+
+        if(diffX < 0){
+
+            showScene(
+                current + 1
+            );
+
+        }
+
+        else{
+
+            showScene(
+                current - 1
+            );
+
+        }
+
+    }
+
+},
+{passive:true}
+);
+
+
+/* =========================
+   KEYBOARD
+========================= */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+    if(
+        e.key === "ArrowRight"
+    ){
+
+        showScene(
+            current + 1
+        );
+
+    }
+
+
+    if(
+        e.key === "ArrowLeft"
+    ){
+
+        showScene(
+            current - 1
+        );
+
+    }
+
+});
+
+</script>
+
+</body>
+  </html><!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>Jan ♡ Birthday</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    background:#07030d;
+    color:white;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    touch-action:manipulation;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(185,80,255,.25),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at 80% 75%,
+        rgba(255,70,180,.20),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #06030c,
+        #160720,
+        #08030e
+    );
+
+    z-index:-10;
+}
+
+.orb{
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(75px);
+
+    opacity:.35;
+
+    animation:
+    orbMove 12s
+    infinite alternate
+    ease-in-out;
+}
+
+.orb1{
+    width:250px;
+    height:250px;
+
+    background:#a83cff;
+
+    left:-90px;
+    top:10%;
+}
+
+.orb2{
+    width:300px;
+    height:300px;
+
+    background:#ff4cb9;
+
+    right:-120px;
+    bottom:5%;
+
+    animation-delay:2s;
+}
+
+@keyframes orbMove{
+
+    from{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translate(50px,-40px)
+        scale(1.2);
+    }
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+#stars{
+    position:fixed;
+    inset:0;
+
+    z-index:-5;
+
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.5;
+
+    animation:
+    twinkle 2s
+    infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.15;
+        transform:scale(.6);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* =========================
+   SCENES
+========================= */
+
+.scene{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100dvh;
+
+    min-height:100dvh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+    25px
+    20px
+    100px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    overscroll-behavior:contain;
+
+    scrollbar-width:none;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:
+    scale(1.08)
+    translateY(20px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease,
+    visibility .8s;
+}
+
+.scene::-webkit-scrollbar{
+    display:none;
+}
+
+.scene.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+    scale(1)
+    translateY(0);
+}
+
+
+.content{
+
+    width:100%;
+
+    max-width:850px;
+
+    text-align:center;
+
+    margin:auto 0;
+}
+
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.glass{
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+    38px
+    25px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.035)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.17);
+
+    backdrop-filter:
+    blur(25px);
+
+    -webkit-backdrop-filter:
+    blur(25px);
+
+    box-shadow:
+
+    0 30px 90px
+    rgba(0,0,0,.45),
+
+    inset 0 1px 0
+    rgba(255,255,255,.15);
+
+    transform-style:preserve-3d;
+
+    animation:
+    glassFloat 5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes glassFloat{
+
+    0%,100%{
+
+        transform:
+        perspective(900px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0);
+    }
+
+    50%{
+
+        transform:
+        perspective(900px)
+        rotateX(1deg)
+        rotateY(-1deg)
+        translateY(-7px);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.label{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#e9b8ff;
+
+    margin-bottom:18px;
+}
+
+h1{
+
+    font-size:
+    clamp(65px,18vw,150px);
+
+    line-height:.85;
+
+    letter-spacing:-5px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #ffd1f1,
+        #c78cff
+    );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    filter:
+    drop-shadow(
+    0 0 25px
+    rgba(255,130,220,.25)
+    );
+}
+
+h2{
+
+    font-size:
+    clamp(36px,9vw,80px);
+
+    line-height:1;
+
+    margin:
+    12px 0 25px;
+}
+
+.text{
+
+    max-width:680px;
+
+    margin:auto;
+
+    font-size:
+    clamp(15px,4.4vw,20px);
+
+    line-height:1.85;
+
+    color:#eee1f2;
+}
+
+.pink{
+    color:#ff9ddd;
+}
+
+.gold{
+    color:#ffd58a;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:55px;
+
+    padding:
+    15px
+    30px;
+
+    margin-top:30px;
+
+    border-radius:100px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.22);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.05)
+    );
+
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    backdrop-filter:
+    blur(15px);
+
+    -webkit-backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.3);
+
+    transition:
+    transform .2s,
+    background .2s;
+}
+
+.btn:active{
+    transform:scale(.92);
+}
+
+.btn:hover{
+    background:
+    rgba(255,255,255,.16);
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:8px;
+
+    margin:
+    28px auto 0;
+
+    max-width:560px;
+}
+
+.time{
+
+    padding:
+    16px 5px;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid
+    rgba(255,255,255,.10);
+
+    box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.08);
+}
+
+.time strong{
+
+    display:block;
+
+    font-size:
+    clamp(23px,7vw,40px);
+
+    line-height:1;
+}
+
+.time span{
+
+    display:block;
+
+    margin-top:7px;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    color:#cdbbd3;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+.hiddenMessage{
+
+    display:none;
+
+    margin-top:28px;
+
+    animation:
+    reveal .8s ease;
+}
+
+@keyframes reveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+
+/* =========================
+   FINAL GLOW
+========================= */
+
+.finalGlow{
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,70,200,.16);
+
+    filter:blur(80px);
+
+    z-index:-1;
+
+    animation:
+    finalPulse 3s
+    infinite alternate;
+}
+
+@keyframes finalPulse{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:.4;
+    }
+
+    to{
+
+        transform:scale(1.3);
+
+        opacity:.8;
+    }
+}
+
+
+/* =========================
+   PROGRESS DOTS
+========================= */
+
+.progress{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:16px;
+
+    transform:
+    translateX(-50%);
+
+    display:flex;
+
+    gap:6px;
+
+    z-index:100;
+}
+
+.dot{
+
+    width:7px;
+    height:7px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.25);
+
+    transition:.3s;
+}
+
+.dot.active{
+
+    width:25px;
+
+    background:#ff9ddd;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.float{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    pointer-events:none;
+
+    z-index:50;
+
+    animation:
+    floatUp 4s
+    linear forwards;
+}
+
+@keyframes floatUp{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translateY(0)
+        scale(.7)
+        rotate(0);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translateY(-105vh)
+        scale(1.4)
+        rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .scene{
+
+        padding:
+        70px
+        17px
+        110px;
+
+        align-items:flex-start;
+    }
+
+    .glass{
+
+        padding:
+        30px
+        18px;
+    }
+
+    h1{
+        letter-spacing:-4px;
+    }
+
+    .countdown{
+        gap:6px;
+    }
+
+    .time{
+        padding:
+        13px 3px;
+    }
+
+    .btn{
+
+        width:
+        min(100%,330px);
+    }
+}
+
+
+/* SMALL HEIGHT PHONES */
+
+@media(max-height:650px){
+
+    .glass{
+
+        padding:
+        22px
+        16px;
+    }
+
+    .label{
+        margin-bottom:10px;
+    }
+
+    .countdown{
+        margin-top:16px;
+    }
+
+    .btn{
+        margin-top:20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="background">
+
+    <div class="orb orb1"></div>
+
+    <div class="orb orb2"></div>
+
+</div>
+
+
+<div id="stars"></div>
+
+
+
+<!-- =========================
+     SCENE 1
+========================= -->
+
+<section
+class="scene active"
+id="scene1">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+31 October · Tumhara din
+</div>
+
+
+<h1>Jan</h1>
+
+
+<p class="text">
+
+Kuch din sirf calendar par
+date nahi hote...
+
+<br><br>
+
+Kuch din kisi
+<span class="pink">khaas shakhs</span>
+ke naam hote hain.
+
+<br><br>
+
+Aur 31 October...
+
+<br>
+
+<span class="pink">
+mere liye tumhara din hai. ♡
+</span>
+
+</p>
+
+
+<div class="countdown">
+
+<div class="time">
+<strong id="days">00</strong>
+<span>Days</span>
+</div>
+
+<div class="time">
+<strong id="hours">00</strong>
+<span>Hours</span>
+</div>
+
+<div class="time">
+<strong id="minutes">00</strong>
+<span>Minutes</span>
+</div>
+
+<div class="time">
+<strong id="seconds">00</strong>
+<span>Seconds</span>
+</div>
+
+</div>
+
+
+<button
+class="btn next">
+
+Darwaza kholo ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 2
+========================= -->
+
+<section
+class="scene"
+id="scene2">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+Aaj ka din special hai
+</div>
+
+
+<h2>
+
+Happy Birthday
+
+<span class="pink">♡</span>
+
+</h2>
+
+
+<p class="text">
+
+Jan...
+
+<br><br>
+
+Tum meri zindagi ke un
+khaas logon mein se ho
+jinki presence apne aap mein
+ek khoobsurat feeling hoti hai.
+
+<br><br>
+
+Tumhari smile dekh kar
+mood acha ho jata hai,
+aur tumhari chhoti chhoti
+baatein bhi yaad reh jaati hain.
+
+<br><br>
+
+Main bas ye chahta hoon ke
+tumhari zindagi hamesha
+khushiyon se bhari rahe.
+
+<br><br>
+
+<span class="pink">
+Tum hamesha isi tarah
+muskurati rehna. ♡
+</span>
+
+</p>
+
+
+<button
+class="btn next">
+
+Ek baat aur ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 3
+========================= -->
+
+<section
+class="scene"
+id="scene3">
+
+<div class="content">
+
+<div class="glass">
+
+<div class="label">
+Private · Sirf tumhare liye
+</div>
+
+
+<h2>
+Ek chhota sa message...
+</h2>
+
+
+<p class="text">
+
+Jan, ye website sirf ek
+birthday wish nahi hai.
+
+<br><br>
+
+Ismein meri taraf se
+thori si effort,
+thori si creativity,
+aur bohat saari
+<span class="pink">
+achhi wishes
+</span>
+rakhi hain.
+
+<br><br>
+
+Kabhi kabhi feelings ko
+proper words mein kehna
+mushkil hota hai...
+
+<br>
+
+isliye socha ke is baar
+words ke bajaye kuch
+different banaya jaye.
+
+</p>
+
+
+<button
+class="btn"
+id="secretBtn">
+
+Message kholo ♡
+
+</button>
+
+
+<div
+class="hiddenMessage"
+id="secretMessage">
+
+<p class="text">
+
+Tum mere liye bohat
+khaas ho, Jan.
+
+<br><br>
+
+Main dua karta hoon ke
+Allah tumhari har jaiz dua
+qabool kare, tumhein
+hamesha khush rakhe aur
+tumhari zindagi mein
+bohat saari khushiyan laaye.
+
+<br><br>
+
+Tumhari smile hamesha
+aisi hi khoobsurat rahe,
+aur tumhein zindagi mein
+wo sab mile jo tumhare
+dil ke liye behtareen ho.
+
+<br><br>
+
+<span class="pink">
+Happy Birthday, meri Jan ♡
+</span>
+
+</p>
+
+</div>
+
+
+<button
+class="btn next"
+id="continueBtn"
+style="display:none;">
+
+Last surprise ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SCENE 4
+========================= -->
+
+<section
+class="scene"
+id="scene4">
+
+<div class="content">
+
+<div class="finalGlow"></div>
+
+
+<div class="glass">
+
+<div class="label">
+31 October · For my Jan
+</div>
+
+
+<h1>Jan</h1>
+
+
+<h2>
+
+Happy Birthday
+
+<span class="pink">♡</span>
+
+</h2>
+
+
+<p class="text">
+
+Aaj ka din tumhare naam.
+
+<br><br>
+
+Allah tumhein hamesha
+khush rakhe,
+tumhari har jaiz dua
+qabool kare aur tumhari
+zindagi ko sukoon,
+khushiyon aur mohabbat
+se bhar de.
+
+<br><br>
+
+Tumhari aankhon mein
+hamesha khushi ho,
+tumhare chehre par
+hamesha smile ho,
+aur tumhari zindagi ka
+har naya saal pehle se
+zyada khoobsurat ho.
+
+<br><br>
+
+<span class="gold">
+
+Happy Birthday, Jan.
+
+</span>
+
+<br>
+
+<span class="pink">
+
+Hamesha khush rehna. ♡
+
+</span>
+
+</p>
+
+
+<button
+class="btn"
+id="celebrate">
+
+Birthday Mode ✦
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROGRESS -->
+
+<div class="progress">
+
+<div class="dot active"></div>
+
+<div class="dot"></div>
+
+<div class="dot"></div>
+
+<div class="dot"></div>
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   SCENES
+========================= */
+
+const scenes = [
+
+    document.getElementById("scene1"),
+
+    document.getElementById("scene2"),
+
+    document.getElementById("scene3"),
+
+    document.getElementById("scene4")
+
+];
+
+
+const dots =
+document.querySelectorAll(".dot");
+
+
+let current = 0;
+
+
+function showScene(index){
+
+    if(index < 0){
+        index = 0;
+    }
+
+    if(index >= scenes.length){
+        index = scenes.length - 1;
+    }
+
+
+    scenes[current]
+    .classList
+    .remove("active");
+
+
+    current = index;
+
+
+    scenes[current]
+    .classList
+    .add("active");
+
+
+    dots.forEach(
+        (dot,i)=>{
+
+            dot.classList.toggle(
+                "active",
+                i === current
+            );
+
+        }
+    );
+
+
+
+    if(current === 3){
+
+        createParticles(15);
+
+    }
+
+}
+
+
+
+/* NEXT BUTTONS */
+
+document
+.querySelectorAll(".next")
+.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            showScene(
+                current + 1
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =========================
+   SECRET MESSAGE
+========================= */
+
+const secretBtn =
+document.getElementById(
+    "secretBtn"
+);
+
+
+const secretMessage =
+document.getElementById(
+    "secretMessage"
+);
+
+
+const continueBtn =
+document.getElementById(
+    "continueBtn"
+);
+
+
+secretBtn.addEventListener(
+"click",
+()=>{
+
+    secretMessage.style.display =
+    "block";
+
+
+    secretBtn.innerHTML =
+    "Message opened ♡";
+
+
+    createParticles(10);
+
+
+    setTimeout(
+        ()=>{
+
+            continueBtn.style.display =
+            "inline-flex";
+
+        },
+        500
+    );
+
+});
+
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+function updateCountdown(){
+
+    const now =
+    new Date();
+
+
+    let year =
+    now.getFullYear();
+
+
+    let target =
+    new Date(
+        year,
+        9,
+        31,
+        0,
+        0,
+        0
+    );
+
+
+    if(now > target){
+
+        target =
+        new Date(
+            year + 1,
+            9,
+            31,
+            0,
+            0,
+            0
+        );
+
+    }
+
+
+    const difference =
+    target - now;
+
+
+    if(difference <= 0){
+
+        document.getElementById(
+            "days"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "hours"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "minutes"
+        ).innerText = "00";
+
+
+        document.getElementById(
+            "seconds"
+        ).innerText = "00";
+
+
+        return;
+
+    }
+
+
+    const days =
+    Math.floor(
+        difference /
+        (1000 * 60 * 60 * 24)
+    );
+
+
+    const hours =
+    Math.floor(
+        (
+            difference /
+            (1000 * 60 * 60)
+        ) % 24
+    );
+
+
+    const minutes =
+    Math.floor(
+        (
+            difference /
+            (1000 * 60)
+        ) % 60
+    );
+
+
+    const seconds =
+    Math.floor(
+        (
+            difference /
+            1000
+        ) % 60
+    );
+
+
+    document.getElementById(
+        "days"
+    ).innerText =
+    String(days)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "hours"
+    ).innerText =
+    String(hours)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "minutes"
+    ).innerText =
+    String(minutes)
+    .padStart(2,"0");
+
+
+    document.getElementById(
+        "seconds"
+    ).innerText =
+    String(seconds)
+    .padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createParticle(){
+
+    const particle =
+    document.createElement("div");
+
+
+    particle.className =
+    "float";
+
+
+    const symbols = [
+
+        "♡",
+        "♥",
+        "✦",
+        "✧",
+        "⋆"
+
+    ];
+
+
+    particle.innerHTML =
+    symbols[
+        Math.floor(
+            Math.random() *
+            symbols.length
+        )
+    ];
+
+
+    particle.style.left =
+    Math.random() *
+    100 +
+    "vw";
+
+
+    particle.style.fontSize =
+    (
+        12 +
+        Math.random()*20
+    ) +
+    "px";
+
+
+    particle.style.animationDuration =
+    (
+        3 +
+        Math.random()*3
+    ) +
+    "s";
+
+
+    document.body.appendChild(
+        particle
+    );
+
+
+    setTimeout(
+        ()=>{
+
+            particle.remove();
+
+        },
+        6000
+    );
+
+}
+
+
+function createParticles(amount){
+
+    for(
+        let i=0;
+        i<amount;
+        i++
+    ){
+
+        setTimeout(
+            createParticle,
+            i*90
+        );
+
+    }
+
+}
+
+
+
+/* =========================
+   FINAL CELEBRATION
+========================= */
+
+document
+.getElementById("celebrate")
+.addEventListener(
+"click",
+function(){
+
+    createParticles(45);
+
+
+    this.innerHTML =
+    "✨ Happy Birthday Jan ✨";
+
+});
+
+
+
+/* =========================
+   STARS
+========================= */
+
+const stars =
+document.getElementById(
+    "stars"
+);
+
+
+for(
+    let i=0;
+    i<100;
+    i++
+){
+
+    const star =
+    document.createElement(
+        "div"
+    );
+
+
+    star.className =
+    "star";
+
+
+    star.style.left =
+    Math.random()*100 +
+    "%";
+
+
+    star.style.top =
+    Math.random()*100 +
+    "%";
+
+
+    star.style.animationDelay =
+    Math.random()*3 +
+    "s";
+
+
+    stars.appendChild(
+        star
+    );
+
+}
+
+
+
+/* =========================
+   MOBILE SWIPE
+========================= */
+
+let startX = 0;
+
+let startY = 0;
+
+
+document.addEventListener(
+"touchstart",
+function(e){
+
+    startX =
+    e.changedTouches[0]
+    .screenX;
+
+
+    startY =
+    e.changedTouches[0]
+    .screenY;
+
+},
+{passive:true}
+);
+
+
+document.addEventListener(
+"touchend",
+function(e){
+
+    const endX =
+    e.changedTouches[0]
+    .screenX;
+
+
+    const endY =
+    e.changedTouches[0]
+    .screenY;
+
+
+    const diffX =
+    endX - startX;
+
+
+    const diffY =
+    endY - startY;
+
+
+    if(
+
+        Math.abs(diffX) > 70 &&
+
+        Math.abs(diffX) >
+        Math.abs(diffY)
+
+    ){
+
+        if(diffX < 0){
+
+            showScene(
+                current + 1
+            );
+
+        }
+
+        else{
+
+            showScene(
+                current - 1
+            );
+
+        }
+
+    }
+
+},
+{passive:true}
+);
+
+
+/* =========================
+   KEYBOARD
+========================= */
+
+document.addEventListener(
+"keydown",
+function(e){
+
+    if(
+        e.key === "ArrowRight"
+    ){
+
+        showScene(
+            current + 1
+        );
+
+    }
+
+
+    if(
+        e.key === "ArrowLeft"
+    ){
+
+        showScene(
+            current - 1
+        );
+
+    }
+
+});
+
+</script>
+
+</body>
+  </html>
